@@ -8,7 +8,7 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "/home/tx/Projects/DotNet/CovPulse/CovPulse.csproj",
-        "projectName": "CovPulse",
+        "projectName": "CovPuls.CLI",
         "projectPath": "/home/tx/Projects/DotNet/CovPulse/CovPulse.csproj",
         "packagesPath": "/home/tx/.nuget/packages/",
         "outputPath": "/home/tx/Projects/DotNet/CovPulse/obj/",
@@ -44,6 +44,16 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "Spectre.Console": {
+              "target": "Package",
+              "version": "[0.49.1, )"
+            },
+            "Spectre.Console.Cli": {
+              "target": "Package",
+              "version": "[0.49.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

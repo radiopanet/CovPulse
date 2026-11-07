@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CovPulse")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+52abf1f1968bca5bb4eb2e4ac6402dc670f97495")]
 [assembly: System.Reflection.AssemblyProductAttribute("CovPulse")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CovPulse")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

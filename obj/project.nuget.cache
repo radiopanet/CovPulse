@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "8F93xkoz01g=",
+  "dgSpecHash": "5LH2PYGnNmY=",
   "success": true,
   "projectFilePath": "/home/tx/Projects/DotNet/CovPulse/CovPulse.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/tx/.nuget/packages/spectre.console/0.49.1/spectre.console.0.49.1.nupkg.sha512",
+    "/home/tx/.nuget/packages/spectre.console.cli/0.49.1/spectre.console.cli.0.49.1.nupkg.sha512"
+  ],
   "logs": []
 }
