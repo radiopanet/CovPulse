@@ -111,7 +111,7 @@
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "/home/tx/Projects/DotNet/CovPulse/CovPulse.csproj",
-      "projectName": "CovPuls.CLI",
+      "projectName": "CovPulse.Cli",
       "projectPath": "/home/tx/Projects/DotNet/CovPulse/CovPulse.csproj",
       "packagesPath": "/home/tx/.nuget/packages/",
       "outputPath": "/home/tx/Projects/DotNet/CovPulse/obj/",

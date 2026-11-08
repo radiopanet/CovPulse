@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>CovPulse.Cli</id>
+    <version>1.0.0</version>
+    <title>CovPulse</title>
+    <authors>CovPulse</authors>
+    <description>A CLI tool to parse Cobertura/OpenCover XML reports and render rich Spectre.Console coverage UIs or concise JSON summaries.</description>
+    <tags>coverage cobertura opencover spectre-console dotnet-tool</tags>
+    <packageTypes>
+      <packageType name="DotnetTool" />
+    </packageTypes>
+    <repository type="git" commit="15c15acbc48854f2ee6f5c4c4be46cf05cf9ad62" />
+  </metadata>
+  <files>
+    <file src="/home/tx/Projects/DotNet/CovPulse/obj/Release/net9.0/DotnetToolSettings.xml" target="tools/net9.0/any/DotnetToolSettings.xml" />
+    <file src="/home/tx/Projects/DotNet/CovPulse/bin/Release/net9.0/publish/CovPulse.dll" target="tools/net9.0/any/CovPulse.dll" />
+    <file src="/home/tx/Projects/DotNet/CovPulse/bin/Release/net9.0/publish/CovPulse.deps.json" target="tools/net9.0/any/CovPulse.deps.json" />
+    <file src="/home/tx/Projects/DotNet/CovPulse/bin/Release/net9.0/publish/CovPulse.runtimeconfig.json" target="tools/net9.0/any/CovPulse.runtimeconfig.json" />
+    <file src="/home/tx/Projects/DotNet/CovPulse/bin/Release/net9.0/publish/CovPulse.pdb" target="tools/net9.0/any/CovPulse.pdb" />
+    <file src="/home/tx/Projects/DotNet/CovPulse/bin/Release/net9.0/publish/Spectre.Console.dll" target="tools/net9.0/any/Spectre.Console.dll" />
+    <file src="/home/tx/Projects/DotNet/CovPulse/bin/Release/net9.0/publish/Spectre.Console.Cli.dll" target="tools/net9.0/any/Spectre.Console.Cli.dll" />
+    <file src="/home/tx/Projects/DotNet/CovPulse/bin/Release/net9.0/publish/de/Spectre.Console.Cli.resources.dll" target="tools/net9.0/any/de/Spectre.Console.Cli.resources.dll" />
+    <file src="/home/tx/Projects/DotNet/CovPulse/bin/Release/net9.0/publish/fr/Spectre.Console.Cli.resources.dll" target="tools/net9.0/any/fr/Spectre.Console.Cli.resources.dll" />
+    <file src="/home/tx/Projects/DotNet/CovPulse/bin/Release/net9.0/publish/sv/Spectre.Console.Cli.resources.dll" target="tools/net9.0/any/sv/Spectre.Console.Cli.resources.dll" />
+  </files>
+</package>
