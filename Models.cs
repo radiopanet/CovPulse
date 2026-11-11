@@ -1,5 +1,3 @@
-using System.Xml;
-
 public record CoverageReport(
     string ProjectName,
     double TotalLineRate,

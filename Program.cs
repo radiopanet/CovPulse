@@ -67,7 +67,6 @@ public sealed class CoverageCommand : AsyncCommand<CoverageSettings>
 
         return Task.FromResult(0);
     }
-
     private static string? AutoDiscoverCoverageFile()
     {
         var currentDir = Directory.GetCurrentDirectory();

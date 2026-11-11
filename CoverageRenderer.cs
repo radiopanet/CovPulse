@@ -28,7 +28,7 @@ public static class CoverageRenderer
         table.AddColumn(new TableColumn("[bold]Line Rate[/]").RightAligned());
         table.AddColumn(new TableColumn("[bold]Status[/]").Centered());
 
-        foreach(var file in report.Files.OrderBy(f => f.LineRate))
+        foreach (var file in report.Files.OrderBy(f => f.LineRate))
         {
             //Color code individual files based on threshold proximity
             var fileColor = file.LineRate >= threshold ? "green" : (file.LineRate >= (threshold - 20) ? "yellow" : "red");
@@ -43,7 +43,6 @@ public static class CoverageRenderer
                 statusBadge
             );
         }
-
         AnsiConsole.Write(table);
     }
 }
