@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyDescriptionAttribute(("A CLI tool to parse Cobertura/OpenCover XML reports and render rich Spectre.Conso" +
     "le coverage UIs or concise JSON summaries."))]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d6e3ed7e88bdf3fb1c314956f3225bc37c2e31c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+afcf2aaac38e3b95c363e9f59ef54ac33f81c0fb")]
 [assembly: System.Reflection.AssemblyProductAttribute("CovPulse")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CovPulse")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

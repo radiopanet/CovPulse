@@ -3,7 +3,7 @@ using System.Xml.Linq;
 
 public static class CoberturaParser
 {
-    public static CoverageReport Parser(string filePath)
+    public static CoverageReport Parse(string filePath)
     {
         var doc = XDocument.Load(filePath);
         var root = doc.Root;

@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
+using System.Text.Json;
 using Spectre.Console;
 using Spectre.Console.Cli;
 
@@ -52,20 +53,33 @@ public sealed class CoverageCommand : AsyncCommand<CoverageSettings>
         if (string.IsNullOrEmpty(targetFile) || !File.Exists(targetFile))
         {
             AnsiConsole.MarkupLine("[bold red]Error:[/] No valid coverage XML file found. Specify a path or run 'dotnet test --collect:\"XPlat Code Coverage\"'.");
+            AnsiConsole.MarkupLine("Run [cyan]dotnet test --collect:\"XPlat Code Coverage\"[/]first or provide an explicit file path.");
             return Task.FromResult(1);
         }
 
-        // 2. Render JSON mode or Terminal UI mode
-        if (settings.Json)
+        try
         {
-            RenderJsonSummary(targetFile);
-        }
-        else
-        {
-            RenderTerminalUi(targetFile, settings.Threshold);
-        }
+            // 2. Parse the XML file into clean domain records
+            var report = CoberturaParser.Parse(targetFile);
 
-        return Task.FromResult(0);
+            // 3. Render JSON mode or Terminal UI mode
+            if (settings.Json)
+            {
+                RenderJsonOutput(report);
+            }
+            else
+            {
+                CoverageRenderer.RenderReport(report, settings.Threshold);
+                // RenderTerminalUi(targetFile, settings.Threshold);
+            }
+
+            return Task.FromResult(0);
+        }
+        catch (Exception ex)
+        {
+            AnsiConsole.MarkupLine($"[bold red]Failed to parse coverage report:[/] {Markup.Escape(ex.Message)}");
+            return Task.FromResult(1);
+        }
     }
     private static string? AutoDiscoverCoverageFile()
     {
@@ -75,6 +89,13 @@ public sealed class CoverageCommand : AsyncCommand<CoverageSettings>
         return Directory.GetFiles(currentDir, "*.cobertura.xml", SearchOption.AllDirectories)
             .Concat(Directory.GetFiles(currentDir, "coverage.xml", SearchOption.AllDirectories))
             .FirstOrDefault();
+    }
+
+    private static void RenderJsonOutput(CoverageReport report)
+    {
+        var options = new JsonSerializerOptions {WriteIndented = true };
+        var json = JsonSerializer.Serialize(report, options);
+        AnsiConsole.WriteLine(json);
     }
 
     private static void RenderJsonSummary(string filePath)
