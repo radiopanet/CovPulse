@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-0.4.dtd">
+<coverage line-rate="0.855" branch-rate="0.75" lines-covered="171" lines-valid="200" branches-covered="75" branches-valid="100" complexity="0" version="0" timestamp="1700000000">
+  <packages>
+    <package name="MyService.Core" line-rate="0.855" branch-rate="0.75" complexity="0">
+      <classes>
+        <class name="MyService.Services.OrderService" filename="Services/OrderService.cs" line-rate="0.925" branch-rate="0.8">
+          <lines>
+            <line number="10" hits="5" branch="false"/>
+            <line number="12" hits="2" branch="false"/>
+            <line num="15" hits="0" branch="false"/>
+          </lines>
+        </class>
+        <class name="MyService.Controllers.PaymentController" filename="Controllers/PaymentController.cs" line-rate="0.45" branch-rate="0.3">
+          <lines>
+            <line number="22" hits="0" branch="false"/>
+            <line number="25" hits="0" branch="false"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>

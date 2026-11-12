@@ -53,7 +53,7 @@ public sealed class CoverageCommand : AsyncCommand<CoverageSettings>
         if (string.IsNullOrEmpty(targetFile) || !File.Exists(targetFile))
         {
             AnsiConsole.MarkupLine("[bold red]Error:[/] No valid coverage XML file found. Specify a path or run 'dotnet test --collect:\"XPlat Code Coverage\"'.");
-            AnsiConsole.MarkupLine("Run [cyan]dotnet test --collect:\"XPlat Code Coverage\"[/]first or provide an explicit file path.");
+            AnsiConsole.MarkupLine("Run [cyan]dotnet test --collect:\"XPlat Code Coverage\"[/] first or provide an explicit file path.");
             return Task.FromResult(1);
         }
 
@@ -62,7 +62,7 @@ public sealed class CoverageCommand : AsyncCommand<CoverageSettings>
             // 2. Parse the XML file into clean domain records
             var report = CoberturaParser.Parse(targetFile);
 
-            // 3. Render JSON mode or Terminal UI mode
+            // 3. Render JSON mode
             if (settings.Json)
             {
                 RenderJsonOutput(report);
